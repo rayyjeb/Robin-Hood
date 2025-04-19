@@ -25,7 +25,7 @@ const Section4 = () => {
 
     return (
         <div
-            className="relative h-[93.5vh] bg-cover bg-center flex justify-center"
+            className="relative h-[800px] bg-cover bg-center flex justify-center"
             style={{
                 backgroundImage: `url(${bgImage})`,
             }}

@@ -2,7 +2,7 @@ import Button from "./ui/button";
 import Video from "/videos/Video.webm"
 const Hero = () => {
     return (
-        <div className="relative h-screen w-full overflow-hidden">
+        <div className="relative h-[800px] w-full overflow-hidden">
             <video
                 className="absolute top-0 left-0 h-full w-full object-cover z-0"
                 src={Video}
