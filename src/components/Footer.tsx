@@ -1,11 +1,38 @@
 // components/Footer.tsx
+import x from "/x.svg"
+import insta from "/insta.svg"
 import robinhood from "/robinhood.svg"
+import linkedin from "/linkedin.svg"
+import tiktok from "/tiktok.svg"
+import yt from "/yt.svg"
 const Footer = () => {
     return (
         <footer className="bg-primary h-full">
-            <div className="bg-primary text-black px-6 py-10 flex gap-18">
+            <div className="border-b border-black">
+                <div className="px-6 py-6 flex items-center flex-nowrap">
+                    {/* Left Links */}
+                    <div className="flex items-center gap-3.5 font-light lg:w-1/2">
+                        <a href="#" className="underline hover:opacity-75">Customer Relationship Summaries</a>
+                        <span className="border-l border-black h-8" />
+                        <a href="#" className="underline hover:opacity-75">FINRA’s BrokerCheck</a>
+                    </div>
 
-                <div className="max-w-1/2 grid grid-cols-1 md:grid-cols-3 text-sm p-2">
+                    {/* Right Social Icons */}
+                    <div className="hidden lg:flex items-center gap-4 flex-nowrap w-1/2">
+                        <span className="font-light text-base whitespace-nowrap">Follow us on</span>
+                        <img src={x} alt="X" />
+                        <img src={insta} alt="Instagram" />
+                        <img src={linkedin} alt="LinkedIn" />
+                        <img src={tiktok} alt="TikTok" />
+                        <img src={yt} alt="YouTube" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="bg-primary text-blackpy-10 flex flex-col lg:flex-row justify-between">
+
+                <div className="lg:max-w-1/2 grid grid-cols-1 sm:grid-cols-3 text-sm lg:p-2 px-6 ">
                     {/* Product */}
                     <div>
                         <h3 className="font-semibold text-base mb-3">Product</h3>
@@ -61,7 +88,22 @@ const Footer = () => {
                 </div>
 
                 {/* Legal Text Block */}
-                <div className="max-w-1/2 space-y-6 text-xs p-2">
+                <div className="mt-8 mb-8 border-t border-black lg:hidden">
+                <div className="px-6 py-6 flex items-center flex-nowrap">
+                  
+
+                    {/* Right Social Icons */}
+                    <div className="flex lg:hidden items-center gap-4 flex-nowrap w-1/2">
+                        <span className="font-light text-base whitespace-nowrap">Follow us on</span>
+                        <img src={x} alt="X" />
+                        <img src={insta} alt="Instagram" />
+                        <img src={linkedin} alt="LinkedIn" />
+                        <img src={tiktok} alt="TikTok" />
+                        <img src={yt} alt="YouTube" />
+                    </div>
+                </div>
+            </div>
+                <div className="lg:max-w-1/2 space-y-6 text-xs p-2  px-6 ">
                     <p className="font-semibold text-base">All investing involves risk.</p>
                     <p className="text-base font-light"><strong className="font-semibold">Brokerage services</strong> are offered through Robinhood Financial LLC, (“RHF”) a registered broker dealer (member <a href="#" className="underline">SIPC</a>), and clearing services through Robinhood Securities, LLC, (“RHS”) a registered broker dealer (member <a href="#" className="underline">SIPC</a>)</p>
                     <p className="text-base font-light"><strong className="font-semibold">Portfolio Management</strong> offered through Robinhood Asset Management (“Robinhood Strategies” or “RAM”), an SEC-registered investment advisor. For additional information about Robinhood Strategies, including about services, fees, risks, and conflicts of interest, please see our firm’s brochure.</p>
@@ -83,3 +125,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
