@@ -1,27 +1,26 @@
-import Button from "./ui/button"
-import SecurityFeaturesGrid from "./ui/grid"
+import Button from "./ui/button";
 
-const Section6 = () => {
+const Section7 = () => {
     return (
-        <div className="bg-primary min-h-[744px] relative flex justify-center w-full p-[50px]">
-            <div className="flex flex-col items-center z-10">
-                <div className="text-black flex items-center gap-8 flex-col p-6">
-                    <h1 className="text-[52px] text-center leading-[52px]">
-                        Become a better investor<br/> on the go, right in the app
-                    </h1>
-                    <p className="font-light">
-                        Here's a preview of the things you can learn when you sign up.
-                    </p>
-                    <Button className="bg-black text-white">Sign up to access Robinhood Learn</Button>
-                </div>
-            </div>
-            <img 
-                src="https://images.ctfassets.net/ilblxxee70tt/PKdx5QPF2hxl9vcbxm55W/b1942354f732fbb69a019c53c73bf46b/homepage_learn_phone_2x.png" 
-                alt="App Preview" 
-                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 max-w-[500px]"
+        <div className="relative h-[700px] w-full overflow-hidden">
+            <video
+                className="absolute top-0 left-0 h-full w-full object-cover z-0"
+                src="https://videos.ctfassets.net/ilblxxee70tt/3r1UZhjsj4AexVmCH9hrfH/1e7b93b16249b7ef73025a31d4cfae38/Dotcom_NewGeneration_Animation_WEB.webm"
+                poster="https://images.ctfassets.net/ilblxxee70tt/6WBms0BL77uZhazKdaye91/981a21240eef31028f4e760ae6fa9886/Investors_Hero.jpg"
+                autoPlay
+                loop
+                muted
+                playsInline
             />
+            <div className="flex-col relative z-10 flex items-center justify-center h-full">
+                <p className="max-w-2xl font-martina tracking-[-0.5px] text-white text-5xl  sm:text-7xl leading-[50px] sm:leading-[78px] text-center px-4">
+                    Join a new generation of investors
+                </p>
+                <div className="h-8" />
+                <Button>Sign Up</Button>
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Section6
+export default Section7;
