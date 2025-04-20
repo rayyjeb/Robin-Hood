@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
 
                     {/* Right Social Icons */}
-                    <div className="hidden lg:flex items-center gap-4 flex-nowrap w-1/2">
+                    <div className="hidden lg:flex items-center gap-4 flex-nowrap w-1/2 px-6">
                         <span className="font-light text-base whitespace-nowrap">Follow us on</span>
                         <img src={x} alt="X" />
                         <img src={insta} alt="Instagram" />
@@ -30,9 +30,9 @@ const Footer = () => {
             </div>
 
 
-            <div className="bg-primary text-blackpy-10 flex flex-col lg:flex-row justify-between">
+            <div className="bg-primary text-blackpy-10 flex flex-col lg:flex-row justify-between mt-4">
 
-                <div className="lg:max-w-1/2 grid grid-cols-1 sm:grid-cols-3 text-sm lg:p-2 px-6 ">
+                <div className="space-y-12 lg:space-y-0 lg:max-w-1/2 grid grid-cols-1 sm:grid-cols-3 text-sm lg:p-2 lg:px-6 px-6 ">
                     {/* Product */}
                     <div>
                         <h3 className="font-semibold text-base mb-3">Product</h3>
