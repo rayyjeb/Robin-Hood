@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 import Button from "./ui/button";
 import Video from "/videos/Video.webm";
 
-const headline = "Built for the \n Future of Trading";
-
 const Hero = () => {
-    const lines = headline.split("\n");
 
     return (
         <div className="relative h-[800px] w-full overflow-hidden">
