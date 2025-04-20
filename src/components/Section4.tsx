@@ -29,8 +29,8 @@ const Section4 = () => {
             }
         };
 
-        handleResize(); // run on mount
-        window.addEventListener("resize", handleResize); // and on resize
+        handleResize();
+        window.addEventListener("resize", handleResize);
 
         return () => window.removeEventListener("resize", handleResize);
     }, []);
