@@ -61,7 +61,7 @@ const Header = () => {
                 }`}
             />
             <div
-              className={`h-[2px] w-6 bg-white transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-[5px]" : ""
+              className={`h-[2px] w-6 bg-white transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-[4px]" : ""
                 }`}
             />
           </div>
