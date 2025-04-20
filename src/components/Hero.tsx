@@ -1,6 +1,14 @@
+'use client';
+
+import { motion } from "framer-motion";
 import Button from "./ui/button";
-import Video from "/videos/Video.webm"
+import Video from "/videos/Video.webm";
+
+const headline = "Built for the \nFuture of Trading";
+
 const Hero = () => {
+    const lines = headline.split("\n");
+
     return (
         <div className="relative h-[800px] w-full overflow-hidden">
             <video
@@ -12,16 +20,58 @@ const Hero = () => {
                 playsInline
             />
             <div className="flex-col relative z-10 flex items-center justify-center h-full">
-                <p className="font-martina text-white text-center px-4 tracking-[-0.5px] font-normal
-    max-[425px]:text-[60px] max-[425px]:leading-[63px]
-    min-[426px]:max-[1023px]:text-[80px] min-[426px]:max-[1023px]:leading-[80px]
-    min-[1024px]:text-[110px] min-[1024px]:leading-[110px]">
-                    Built for the <br /> Future of Trading
-                </p>
+                <motion.p
+                    className="font-martina text-white text-center px-4 tracking-[-0.5px] font-normal
+                    max-[425px]:text-[60px] max-[425px]:leading-[63px]
+                    min-[426px]:max-[1023px]:text-[80px] min-[426px]:max-[1023px]:leading-[80px]
+                    min-[1024px]:text-[110px] min-[1024px]:leading-[110px]"
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.035,
+                            },
+                        },
+                        hidden: {},
+                    }}
+                >
+                    {lines.map((line, i) => (
+                        <div key={i}>
+                            {line.split("").map((char, index) => (
+                                <motion.span
+                                    key={index}
+                                    variants={{
+                                        hidden: { opacity: 0, filter: "blur(8px)" },
+                                        visible: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.4 } },
+                                    }}
+                                >
+                                    {char === " " ? "\u00A0" : char}
+                                </motion.span>
+                            ))}
+                            <br />
+                        </div>
+                    ))}
+                </motion.p>
 
                 <div className="h-8" />
-                <p className="mb-8 px-6 text-white text-[22px] text-center tracking-wide">Analyze, buy, and sell with tools purpose-built for how you trade.</p>
-                <Button>Sign Up</Button>
+                <motion.p
+                    className="mb-8 px-6 text-white font-light text-[22px] text-center tracking-wide"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+                >
+                    Analyze, buy, and sell with tools purpose-built for how you trade.
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }} // comes after subtext
+                >
+                    <Button>Sign Up</Button>
+                </motion.div>
+
             </div>
         </div>
     );

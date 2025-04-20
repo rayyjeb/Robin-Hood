@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "./ui/button";
+import { motion } from "framer-motion";
 
 const Section2 = () => {
   const [bgImage, setBgImage] = useState(
@@ -44,9 +45,18 @@ const Section2 = () => {
       <div className="w-full max-w-[1000px] px-4 sm:px-10 mt-10 md:-mt-20">
         <div className="flex flex-col md:items-end text-left leading-12">
           <div className="max-w-[280px] sm:max-w-[370px]">
-            <h2 className="text-primary text-2xl sm:text-3xl md:text-[42px] font-light">
-              Intuitive trading tools
-            </h2>
+
+            <motion.div
+              className="text-primary text-2xl sm:text-3xl md:text-[42px] font-light"
+              initial={{ opacity: 0, filter: "blur(5px)" }} // Initial state: blurred and invisible
+              animate={{ opacity: 1, filter: "blur(0)" }}  // Final state: clear and visible
+              transition={{ duration: 1 }}
+              viewport={{ once: true, amount: 0.6 }}  // Smooth transition
+            >
+              <h2>
+                Intuitive trading tools
+              </h2>
+            </motion.div>
             <p className="text-white text-2xl sm:text-3xl xs:text-[34px] lg:text-[40px] font-light mt-2">
               Build your strategy and track market trends, seamlessly
             </p>
@@ -54,12 +64,12 @@ const Section2 = () => {
               Trade stocks, options, crypto, and more on <br /> Robinhood Legend and the Robinhood app.
             </p>
             <Button className="w-fit text-sm mt-5">Learn More</Button>
-          <div className="absolute bottom-5 px-4 max-w-96">
-            <p className="text-[11px] sm:text-xs font-extralight leading-5 text-white">
-              Stocks & funds offered through Robinhood Financial. Crypto offered
-              through Robinhood Crypto. See our Fee Schedule for more details.
-            </p>
-          </div>
+            <div className="absolute bottom-5 px-4 max-w-96">
+              <p className="text-[11px] sm:text-xs font-extralight leading-5 text-white">
+                Stocks & funds offered through Robinhood Financial. Crypto offered
+                through Robinhood Crypto. See our Fee Schedule for more details.
+              </p>
+            </div>
           </div>
 
         </div>
