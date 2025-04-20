@@ -11,7 +11,7 @@ const Section6 = () => {
                     <p className="font-light text-center">
                         Here's a preview of the things you can learn when you sign up.
                     </p>
-                    <Button className="bg-black text-white">Sign up to access Robinhood Learn</Button>
+                    <Button className="bg-black text-white text-xs sm:text-base">Sign up to access Robinhood Learn</Button>
                 </div>
             </div>
             <img 
