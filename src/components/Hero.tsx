@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Button from "./ui/button";
 import Video from "/videos/Video.webm";
 
-const headline = "Built for the \nFuture of Trading";
+const headline = "Built for the \n Future of Trading";
 
 const Hero = () => {
     const lines = headline.split("\n");
@@ -20,39 +20,13 @@ const Hero = () => {
                 playsInline
             />
             <div className="flex-col relative z-10 flex items-center justify-center h-full">
-                <motion.p
-                    className="font-martina text-white text-center px-4 tracking-[-0.5px] font-normal
-                    max-[425px]:text-[60px] max-[425px]:leading-[63px]
-                    min-[426px]:max-[1023px]:text-[80px] min-[426px]:max-[1023px]:leading-[80px]
-                    min-[1024px]:text-[110px] min-[1024px]:leading-[110px]"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                        visible: {
-                            transition: {
-                                staggerChildren: 0.035,
-                            },
-                        },
-                        hidden: {},
-                    }}
-                >
-                    {lines.map((line, i) => (
-                        <div key={i}>
-                            {line.split("").map((char, index) => (
-                                <motion.span
-                                    key={index}
-                                    variants={{
-                                        hidden: { opacity: 0, filter: "blur(8px)" },
-                                        visible: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.4 } },
-                                    }}
-                                >
-                                    {char === " " ? "\u00A0" : char}
-                                </motion.span>
-                            ))}
-                            <br />
-                        </div>
-                    ))}
-                </motion.p>
+                <p className="font-martina text-white text-center px-4 tracking-[-0.5px] font-normal
+    max-[426px]:text-[60px] max-[426px]:leading-[63px]
+    min-[426px]:max-[1023px]:text-[80px] min-[426px]:max-[1023px]:leading-[80px]
+    min-[1024px]:text-[110px] min-[1024px]:leading-[110px]">
+                    Built for the <br /> Future of Trading
+                </p>
+
 
                 <div className="h-8" />
                 <motion.p
